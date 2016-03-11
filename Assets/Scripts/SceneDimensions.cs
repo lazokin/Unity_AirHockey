@@ -3,9 +3,9 @@ using System.Collections;
 
 public class SceneDimensions : MonoBehaviour
 {
-    // safe lengths
-    private float safeLengthLong = 1920;
-    private float safeLengthShort = 1280;
+    // design lengths
+    private float designLengthLong = 2048;
+    private float designLengthShort = 1536;
 
     // screen dimensions
     private float screenWidth;
@@ -72,13 +72,13 @@ public class SceneDimensions : MonoBehaviour
         // calculate safe dimensions
         if (isLandscape)
         {
-            safeWidth = safeLengthLong;
-            safeHeight = safeLengthShort;
+            safeWidth = designLengthLong;
+            safeHeight = designLengthShort;
         }
         if (isPortrait)
         {
-            safeWidth = safeLengthShort;
-            safeHeight = safeLengthLong;
+            safeWidth = designLengthShort;
+            safeHeight = designLengthLong;
         }
         safeLeft = -safeWidth / 2;
         safeRight = safeWidth / 2;

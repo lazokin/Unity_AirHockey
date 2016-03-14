@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SceneDimensions : MonoBehaviour
+public class SceneController : MonoBehaviour
 {
     // design lengths
     private float designLengthLong = 2048;

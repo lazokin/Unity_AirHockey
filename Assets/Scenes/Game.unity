@@ -199,7 +199,7 @@ GameObject:
   - 4: {fileID: 601420063}
   - 114: {fileID: 601420064}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -333,6 +333,14 @@ Prefab:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 11492284, guid: 54ce0a3d266d29445a141a4d46992d28, type: 2}
+      propertyPath: sceneDimensions
+      value: 
+      objectReference: {fileID: 1839758173}
+    - target: {fileID: 11492284, guid: 54ce0a3d266d29445a141a4d46992d28, type: 2}
+      propertyPath: sceneController
+      value: 
+      objectReference: {fileID: 1839758173}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54ce0a3d266d29445a141a4d46992d28, type: 2}
   m_IsPrefabParent: 0
@@ -367,7 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1abb77c5d25937148adaa70e700cd951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneDimensions: {fileID: 1839758173}
+  sceneController: {fileID: 1839758173}
 --- !u!81 &753243626
 AudioListener:
   m_ObjectHideFlags: 0
@@ -609,6 +617,14 @@ Prefab:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 11492284, guid: 54ce0a3d266d29445a141a4d46992d28, type: 2}
+      propertyPath: sceneDimensions
+      value: 
+      objectReference: {fileID: 1839758173}
+    - target: {fileID: 11492284, guid: 54ce0a3d266d29445a141a4d46992d28, type: 2}
+      propertyPath: sceneController
+      value: 
+      objectReference: {fileID: 1839758173}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54ce0a3d266d29445a141a4d46992d28, type: 2}
   m_IsPrefabParent: 0
@@ -622,7 +638,7 @@ GameObject:
   - 4: {fileID: 1839758172}
   - 114: {fileID: 1839758173}
   m_Layer: 0
-  m_Name: SceneManager
+  m_Name: Scene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

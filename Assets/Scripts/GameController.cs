@@ -12,6 +12,11 @@ public class GameController : MonoBehaviour {
     public Text player1ScoreText;
     public Text player2ScoreText;
 
+    public AudioClip hitClip;
+    public AudioClip scoreClip;
+
+    private AudioSource audioSource;
+
     private List<SpriteController> players;
     private Vector2 screenSize;
     private int player1Score;
@@ -29,7 +34,8 @@ public class GameController : MonoBehaviour {
         player1Score = 0;
         player2Score = 0;
         screenSize = new Vector2(sceneController.SceneWidth, sceneController.SceneHeight);
-	}
+        audioSource = GetComponent<AudioSource>();
+    }
 	
 	void Update ()
     {
@@ -60,7 +66,7 @@ public class GameController : MonoBehaviour {
                 puckVector.y = force * Mathf.Sin(angle);
                 puckNextPosition.x = playerNextPosition.x + (player.radius() + puck.radius() + force) * Mathf.Cos(angle);
                 puckNextPosition.y = playerNextPosition.y + (player.radius() + puck.radius() + force) * Mathf.Sin(angle);
-                // play hit sound
+                playSound(hitClip);
             }
         }
 
@@ -69,7 +75,7 @@ public class GameController : MonoBehaviour {
         {
             puckNextPosition.x = -screenSize.x / 2 + puck.radius();
             puckVector.x *= -0.8f;
-            // play hit sound
+            playSound(hitClip);
         }
 
         // puck and court right side
@@ -77,7 +83,7 @@ public class GameController : MonoBehaviour {
         {
             puckNextPosition.x = screenSize.x / 2 - puck.radius();
             puckVector.x *= -0.8f;
-            // play hit sound
+            playSound(hitClip);
         }
 
         // puck and court top side
@@ -87,7 +93,7 @@ public class GameController : MonoBehaviour {
             {
                 puckNextPosition.y = screenSize.y / 2 - puck.radius();
                 puckVector.y *= -0.8f;
-                // play hit sound
+                playSound(hitClip);
             }
         }
 
@@ -98,7 +104,7 @@ public class GameController : MonoBehaviour {
             {
                 puckNextPosition.y = -screenSize.y / 2 + puck.radius();
                 puckVector.y *= -0.8f;
-                // play hit sound
+                playSound(hitClip);
             }
         }
 
@@ -211,7 +217,7 @@ public class GameController : MonoBehaviour {
 
     private void playerScore(int player)
     {
-        // play score sound
+        playSound(scoreClip);
         puck.Vector = Vector2.zero;
 
         // update score
@@ -233,5 +239,11 @@ public class GameController : MonoBehaviour {
         player2.setPosition(new Vector2(0, +800));
         player1.IsTouched = false;
         player2.IsTouched = false;
+    }
+
+    private void playSound(AudioClip clip)
+    {
+        audioSource.clip = clip;
+        audioSource.Play();
     }
 }

@@ -208,8 +208,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1903126510}
   - {fileID: 949738539}
+  - {fileID: 1903126510}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_AnchorMin: {x: 0, y: 0}
@@ -257,11 +257,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneController: {fileID: 1839758173}
-  player1: {fileID: 705728746}
-  player2: {fileID: 1493880906}
+  player1: {fileID: 1493880906}
+  player2: {fileID: 705728746}
   puck: {fileID: 1198438871}
-  player1ScoreText: {fileID: 1903126511}
-  player2ScoreText: {fileID: 949738540}
+  player1ScoreText: {fileID: 949738540}
+  player2ScoreText: {fileID: 1903126511}
 --- !u!1 &623959879
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +361,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 183994, guid: 54ce0a3d266d29445a141a4d46992d28, type: 2}
       propertyPath: m_Name
-      value: Player1
+      value: Player2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54ce0a3d266d29445a141a4d46992d28, type: 2}
@@ -482,7 +482,7 @@ GameObject:
   - 222: {fileID: 949738541}
   - 114: {fileID: 949738540}
   m_Layer: 5
-  m_Name: ScorePlayer2
+  m_Name: ScorePlayer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -499,7 +499,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 592611702}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 1511, y: -1048}
@@ -602,7 +602,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
 --- !u!114 &1198438871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,7 +655,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 183994, guid: 54ce0a3d266d29445a141a4d46992d28, type: 2}
       propertyPath: m_Name
-      value: Player2
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: sceneDimensions
@@ -785,7 +785,7 @@ GameObject:
   - 222: {fileID: 1903126512}
   - 114: {fileID: 1903126511}
   m_Layer: 5
-  m_Name: ScorePlayer1
+  m_Name: ScorePlayer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -802,7 +802,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 592611702}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -25, y: -1000}

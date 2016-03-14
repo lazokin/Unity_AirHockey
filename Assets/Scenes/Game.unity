@@ -85,18 +85,46 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &141562265 stripped
+--- !u!1 &170159545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 170159547}
+  - 114: {fileID: 170159546}
+  m_Layer: 0
+  m_Name: Input
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &170159546
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11492284, guid: 54ce0a3d266d29445a141a4d46992d28,
-    type: 2}
-  m_PrefabInternal: {fileID: 705728745}
-  m_Script: {fileID: 11500000, guid: 71e8feaa28f82af4b9f62cd8542bdacf, type: 3}
---- !u!114 &517454631 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11492284, guid: 54ce0a3d266d29445a141a4d46992d28,
-    type: 2}
-  m_PrefabInternal: {fileID: 1493880905}
-  m_Script: {fileID: 11500000, guid: 71e8feaa28f82af4b9f62cd8542bdacf, type: 3}
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170159545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a97a62da31aca0344811138eebad198f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameController: {fileID: 601420064}
+--- !u!4 &170159547
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170159545}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -49.448902, y: -23.69497, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
 --- !u!1 &592611698
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,7 +211,7 @@ RectTransform:
   - {fileID: 1903126510}
   - {fileID: 949738539}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -216,7 +244,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &601420064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,10 +256,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c82f4cbded8da94b9ce2b9a88092085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 141562265}
-  player2: {fileID: 517454631}
-  playerScore1: {fileID: 1903126511}
-  playerScore2: {fileID: 949738540}
+  sceneController: {fileID: 1839758173}
+  player1: {fileID: 705728746}
+  player2: {fileID: 1493880906}
+  puck: {fileID: 1198438871}
+  player1ScoreText: {fileID: 1903126511}
+  player2ScoreText: {fileID: 949738540}
 --- !u!1 &623959879
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +319,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1001 &705728745
 Prefab:
   m_ObjectHideFlags: 0
@@ -333,17 +363,15 @@ Prefab:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
-    - target: {fileID: 11492284, guid: 54ce0a3d266d29445a141a4d46992d28, type: 2}
-      propertyPath: sceneDimensions
-      value: 
-      objectReference: {fileID: 1839758173}
-    - target: {fileID: 11492284, guid: 54ce0a3d266d29445a141a4d46992d28, type: 2}
-      propertyPath: sceneController
-      value: 
-      objectReference: {fileID: 1839758173}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54ce0a3d266d29445a141a4d46992d28, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &705728746 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11429380, guid: 54ce0a3d266d29445a141a4d46992d28,
+    type: 2}
+  m_PrefabInternal: {fileID: 705728745}
+  m_Script: {fileID: 11500000, guid: bec7f0951d97777488144676bb6d0874, type: 3}
 --- !u!1 &753243624
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,7 +470,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &949738538
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +553,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1198438870}
   - 212: {fileID: 1198438869}
+  - 114: {fileID: 1198438871}
   m_Layer: 0
   m_Name: Puck
   m_TagString: Untagged
@@ -573,7 +602,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
+--- !u!114 &1198438871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1198438868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec7f0951d97777488144676bb6d0874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1493880905
 Prefab:
   m_ObjectHideFlags: 0
@@ -617,17 +657,23 @@ Prefab:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
-    - target: {fileID: 11492284, guid: 54ce0a3d266d29445a141a4d46992d28, type: 2}
+    - target: {fileID: 0}
       propertyPath: sceneDimensions
       value: 
       objectReference: {fileID: 1839758173}
-    - target: {fileID: 11492284, guid: 54ce0a3d266d29445a141a4d46992d28, type: 2}
+    - target: {fileID: 0}
       propertyPath: sceneController
       value: 
       objectReference: {fileID: 1839758173}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54ce0a3d266d29445a141a4d46992d28, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1493880906 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11429380, guid: 54ce0a3d266d29445a141a4d46992d28,
+    type: 2}
+  m_PrefabInternal: {fileID: 1493880905}
+  m_Script: {fileID: 11500000, guid: bec7f0951d97777488144676bb6d0874, type: 3}
 --- !u!1 &1839758171
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,7 +773,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1 &1903126509
 GameObject:
   m_ObjectHideFlags: 0
